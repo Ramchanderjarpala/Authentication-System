@@ -2,11 +2,15 @@
 
 A production-ready authentication system built with Node.js, Express.js, React, and MongoDB featuring JWT tokens, refresh token mechanism, and comprehensive security measures.
 
+## Demo
+
+![Auth System Demo](./frontend/public/Auth%20System.png)
+
 ## Links
 
-🔗 **GitHub Repository**: [https://github.com/yourusername/secure-auth-system](https://github.com/yourusername/secure-auth-system)
+🔗 **GitHub Repository**: [https://github.com/xboybx/Authentication-System.git](https://github.com/xboybx/Authentication-System.git)
 
-🚀 **Live Demo**: [https://secure-auth-demo.vercel.app](https://secure-auth-demo.vercel.app)
+🚀 **Live Demo**: [https://authentication-system-oy28.onrender.com/](https://authentication-system-oy28.onrender.com/)
 
 ## Features
 

@@ -9,12 +9,12 @@ const corsOptions = {
     const allowedOrigins = [
       process.env.FRONTEND_URL,
       'http://localhost:3000',
-      'http://localhost:3001'
+      'http://localhost:3001',
     ];
-    
+
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    
+
     if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -86,7 +86,7 @@ const securityHeaders = helmet({
 // Request logging middleware
 const requestLogger = (req, res, next) => {
   const start = Date.now();
-  
+
   res.on('finish', () => {
     const duration = Date.now() - start;
     logger.info({
@@ -98,7 +98,7 @@ const requestLogger = (req, res, next) => {
       userAgent: req.get('User-Agent')
     });
   });
-  
+
   next();
 };
 
@@ -121,7 +121,7 @@ const sanitizeInput = (req, res, next) => {
   if (req.body) req.body = sanitize(req.body);
   if (req.query) req.query = sanitize(req.query);
   if (req.params) req.params = sanitize(req.params);
-  
+
   next();
 };
 
